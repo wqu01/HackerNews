@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "d4df077f1e927bfd5f7bd3d9cd3b49f3"
+build_time: [510513787, 281594000]
+inputs:
+  "/Users/WenNiao/myproject/iosprojects/HackerNews/HackerNewsTests/HackerNewsTests.swift": [510206318, 0]

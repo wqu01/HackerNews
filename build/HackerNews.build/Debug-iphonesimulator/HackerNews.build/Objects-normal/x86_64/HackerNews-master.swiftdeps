@@ -1,0 +1,9 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "53b0270585bcbcc775a6fb96b077c337"
+build_time: [510532971, 955216000]
+inputs:
+  "/Users/WenNiao/myproject/iosprojects/HackerNews/TopStoryData.swift": [510532203, 0]
+  "/Users/WenNiao/myproject/iosprojects/HackerNews/HackerNews/TableViewController.swift": [510532203, 0]
+  "/Users/WenNiao/myproject/iosprojects/HackerNews/HackerNews/ViewController.swift": [510532929, 0]
+  "/Users/WenNiao/myproject/iosprojects/HackerNews/HackerNews/TableViewCell.swift": [510524157, 0]
+  "/Users/WenNiao/myproject/iosprojects/HackerNews/HackerNews/AppDelegate.swift": [510206318, 0]

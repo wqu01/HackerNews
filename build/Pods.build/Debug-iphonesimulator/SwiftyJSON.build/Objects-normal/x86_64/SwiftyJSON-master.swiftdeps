@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "53e19ccc4edd65067d4ae8d585f0d1b4"
+build_time: [510513715, 764075000]
+inputs:
+  "/Users/WenNiao/myproject/iosprojects/HackerNews/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [510243752, 0]

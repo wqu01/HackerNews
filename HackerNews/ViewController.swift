@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
+    var newsData: NewsModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //print(newsData)
+        
+        let url = NSURL(string: (newsData?.url)!)
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
+
+
     }
 
     override func didReceiveMemoryWarning() {
