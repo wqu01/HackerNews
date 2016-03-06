@@ -113,6 +113,7 @@ SWIFT_CLASS("_TtC10HackerNews11AppDelegate")
 SWIFT_CLASS("_TtC10HackerNews13TableViewCell")
 @interface TableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified storyTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified storyAuthorLabel;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;

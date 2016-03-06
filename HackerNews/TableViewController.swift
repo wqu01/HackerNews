@@ -13,13 +13,7 @@ class TableViewController: UITableViewController {
         
     var newsObject = [Int: NewsModel]()
     var newsStoryIds : [Int] = []
-    /*
-    var currentOffSet = 10 {
-        didSet {
-            initializeData(currentOffSet, newsArray: self.newsStoryIds)
-        }
-    }
-*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,22 +29,15 @@ class TableViewController: UITableViewController {
     
     func getData(){
         NewsData.getTopStories{[unowned self] newsIDs, error in
-            //print("sindie get top stories")
             if let _ = newsIDs {
-                //print ("newsID exists")
                 self.newsStoryIds = newsIDs as! [Int]
                 //newstoryIds now contains a list of ids
-                //self.currentOffSet = 10
-                //print(self.newsStoryIds)
                 self.tableView.reloadData()
             }
             
         }
     }
     
-
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -76,27 +63,20 @@ class TableViewController: UITableViewController {
         if let newsData = self.newsObject[indexPath.row] {
             // from caches
             cell.storyTitleLabel.text = newsData.title
+            cell.storyAuthorLabel.text = "by " + newsData.author!
         }
-        else {
+        else { //make network call
             NewsData.getStoryData(self.newsStoryIds[indexPath.row]){
                 data, error in
                 if error == nil {
                     self.newsObject[indexPath.row] = data
-                    //self.tableView.reloadData()
                     cell.storyTitleLabel.text = data!.title
+                    cell.storyAuthorLabel.text = "by " + (data?.author)!
                 }
                 
             }
         }
         
-        
-       
-        
-        //let newsData = newsObject[indexPath.row]
-        
-
-        // Configure the cell...
-
         return cell
     }
     
@@ -152,6 +132,4 @@ class TableViewController: UITableViewController {
             
         }
     }
-    
-
 }

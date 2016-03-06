@@ -10,17 +10,17 @@ provides-member:
 - ["V10HackerNews9NewsModel", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "ErrorType"
-- !private "StringLiteralType"
-- "IntegerLiteralType"
 - "AnyObject"
-- "Int"
-- !private "Alamofire"
-- "FloatLiteralType"
 - "NewsModel"
 - "NewsData"
+- "ErrorType"
 - !private "JSON"
+- "FloatLiteralType"
 - "String"
+- "Int"
+- "IntegerLiteralType"
+- !private "StringLiteralType"
+- !private "Alamofire"
 depends-member:
 - !private ["PSs9AnyObject", "Alamofire"]
 - !private ["PSs9AnyObject", "JSON"]
@@ -249,6 +249,7 @@ depends-member:
 - ["C10HackerNews8NewsData", "init"]
 - ["V10HackerNews9NewsModel", "Int"]
 - ["V10HackerNews9NewsModel", "String"]
+- ["V10HackerNews9NewsModel", "author"]
 - ["V10HackerNews9NewsModel", "id"]
 - ["V10HackerNews9NewsModel", "init"]
 - ["V10HackerNews9NewsModel", "title"]
@@ -491,4 +492,4 @@ depends-external:
 - "/Users/WenNiao/myproject/iosprojects/HackerNews/build/Debug-iphonesimulator/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
 - "/Users/WenNiao/myproject/iosprojects/HackerNews/build/Debug-iphonesimulator/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/WenNiao/myproject/iosprojects/HackerNews/build/Debug-iphonesimulator/SwiftyJSON.framework/Modules/module.modulemap"
-interface-hash: "25bf15eee7399dc1f4cda66b39fbf416"
+interface-hash: "f4b6c385f6640ed91ee3b48dfd418e68"

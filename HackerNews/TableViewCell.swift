@@ -10,7 +10,8 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var storyTitleLabel: UILabel!
+    @IBOutlet weak var storyTitleLabel: UILabel!    
+    @IBOutlet weak var storyAuthorLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

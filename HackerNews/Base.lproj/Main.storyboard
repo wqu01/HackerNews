@@ -15,28 +15,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" id="Rpi-Gm-KEg" customClass="TableViewCell" customModule="HackerNews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="100" id="Rpi-Gm-KEg" customClass="TableViewCell" customModule="HackerNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" tableViewCell="Rpi-Gm-KEg" id="Oe2-bl-8N8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l2-ZH-CYa">
-                                            <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l2-ZH-CYa">
+                                            <rect key="frame" x="21" y="8" width="565" height="51"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FN-le-0i4">
+                                            <rect key="frame" x="21" y="67" width="565" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="1l2-ZH-CYa" firstAttribute="leading" secondItem="Oe2-bl-8N8" secondAttribute="leadingMargin" constant="7" id="5Mg-GF-JOp"/>
-                                        <constraint firstItem="1l2-ZH-CYa" firstAttribute="top" secondItem="Oe2-bl-8N8" secondAttribute="topMargin" id="Njx-M0-cS2"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="1l2-ZH-CYa" secondAttribute="trailing" constant="7" id="khN-kc-EKV"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="1l2-ZH-CYa" secondAttribute="bottom" constant="7" id="lbW-oG-gFa"/>
+                                        <constraint firstItem="1l2-ZH-CYa" firstAttribute="leading" secondItem="Oe2-bl-8N8" secondAttribute="leadingMargin" constant="7" id="9IZ-KE-NsR"/>
+                                        <constraint firstItem="2FN-le-0i4" firstAttribute="bottom" secondItem="Oe2-bl-8N8" secondAttribute="bottomMargin" id="F3Z-0j-J2g"/>
+                                        <constraint firstItem="2FN-le-0i4" firstAttribute="leading" secondItem="Oe2-bl-8N8" secondAttribute="leadingMargin" constant="7" id="LKJ-eJ-xTo"/>
+                                        <constraint firstItem="1l2-ZH-CYa" firstAttribute="top" secondItem="Oe2-bl-8N8" secondAttribute="topMargin" id="asC-cr-Q6z"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="2FN-le-0i4" secondAttribute="trailing" constant="8" id="b0Y-r9-skP"/>
+                                        <constraint firstItem="2FN-le-0i4" firstAttribute="top" secondItem="1l2-ZH-CYa" secondAttribute="bottom" constant="7" id="b6S-ar-UTo"/>
+                                        <constraint firstItem="1l2-ZH-CYa" firstAttribute="trailing" secondItem="Oe2-bl-8N8" secondAttribute="trailingMargin" constant="7" id="xVe-xe-X0o"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="storyAuthorLabel" destination="2FN-le-0i4" id="SL7-IA-tmS"/>
                                     <outlet property="storyTitleLabel" destination="1l2-ZH-CYa" id="OAX-Zh-Ew3"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowWebView" id="IF9-Fw-AwJ"/>
                                 </connections>
@@ -88,6 +99,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S0f-Lu-4pQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.96470588235294119" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

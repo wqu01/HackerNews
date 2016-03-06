@@ -6,30 +6,31 @@ provides-nominal:
 provides-member:
 - ["C10HackerNews19TableViewController", ""]
 provides-dynamic-lookup:
-- "getData"
 - "prepareForSegue"
 - "numberOfSectionsInTableView"
+- "getData"
+- "viewDidLoad"
 - "newsStoryIds"
 - "tableView"
 - "tableView"
 - "didReceiveMemoryWarning"
-- "viewDidLoad"
 depends-top-level:
-- "NewsModel"
 - "UIStoryboardSegue"
+- "Int"
+- "NSIndexPath"
+- "TableViewController"
+- "UITableViewCell"
+- !private "NewsData"
+- !private "=="
+- !private "TableViewCell"
 - !private "UITableViewAutomaticDimension"
+- !private "StringLiteralType"
 - !private "ViewController"
 - "AnyObject"
-- "NSIndexPath"
-- !private "NewsData"
-- "Int"
-- "UITableViewCell"
-- !private "TableViewCell"
-- !private "=="
-- "TableViewController"
-- !private "StringLiteralType"
+- "NewsModel"
 - "UITableView"
 - "UITableViewController"
+- !private "+"
 depends-member:
 - ["PSs9AnyObject", "Int"]
 - !private ["PSs9AnyObject", "NewsData"]
@@ -52,6 +53,7 @@ depends-member:
 - !private ["PSs9AnyObject", "reloadData"]
 - !private ["PSs9AnyObject", "row"]
 - !private ["PSs9AnyObject", "rowHeight"]
+- !private ["PSs9AnyObject", "storyAuthorLabel"]
 - !private ["PSs9AnyObject", "storyTitleLabel"]
 - ["PSs9AnyObject", "tableView"]
 - !private ["PSs9AnyObject", "text"]
@@ -99,6 +101,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "reloadData"]
 - !private ["PSs11CVarArgType", "row"]
 - !private ["PSs11CVarArgType", "rowHeight"]
+- !private ["PSs11CVarArgType", "storyAuthorLabel"]
 - !private ["PSs11CVarArgType", "storyTitleLabel"]
 - ["PSs11CVarArgType", "tableView"]
 - !private ["PSs11CVarArgType", "text"]
@@ -146,6 +149,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "reloadData"]
 - !private ["PSs23CustomStringConvertible", "row"]
 - !private ["PSs23CustomStringConvertible", "rowHeight"]
+- !private ["PSs23CustomStringConvertible", "storyAuthorLabel"]
 - !private ["PSs23CustomStringConvertible", "storyTitleLabel"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - ["PSs23CustomStringConvertible", "tableView"]
@@ -178,6 +182,7 @@ depends-member:
 - !private ["PSs9Equatable", "reloadData"]
 - !private ["PSs9Equatable", "row"]
 - !private ["PSs9Equatable", "rowHeight"]
+- !private ["PSs9Equatable", "storyAuthorLabel"]
 - !private ["PSs9Equatable", "storyTitleLabel"]
 - ["PSs9Equatable", "tableView"]
 - !private ["PSs9Equatable", "text"]
@@ -209,6 +214,7 @@ depends-member:
 - !private ["PSs8Hashable", "reloadData"]
 - !private ["PSs8Hashable", "row"]
 - !private ["PSs8Hashable", "rowHeight"]
+- !private ["PSs8Hashable", "storyAuthorLabel"]
 - !private ["PSs8Hashable", "storyTitleLabel"]
 - ["PSs8Hashable", "tableView"]
 - !private ["PSs8Hashable", "text"]
@@ -267,6 +273,7 @@ depends-member:
 - !private ["PSo8NSCoding", "reloadData"]
 - !private ["PSo8NSCoding", "row"]
 - !private ["PSo8NSCoding", "rowHeight"]
+- !private ["PSo8NSCoding", "storyAuthorLabel"]
 - !private ["PSo8NSCoding", "storyTitleLabel"]
 - ["PSo8NSCoding", "tableView"]
 - !private ["PSo8NSCoding", "text"]
@@ -315,6 +322,7 @@ depends-member:
 - !private ["CSo8NSObject", "reloadData"]
 - !private ["CSo8NSObject", "row"]
 - !private ["CSo8NSObject", "rowHeight"]
+- !private ["CSo8NSObject", "storyAuthorLabel"]
 - !private ["CSo8NSObject", "storyTitleLabel"]
 - ["CSo8NSObject", "tableView"]
 - !private ["CSo8NSObject", "text"]
@@ -338,6 +346,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "reloadData"]
 - !private ["PSo16NSObjectProtocol", "row"]
 - !private ["PSo16NSObjectProtocol", "rowHeight"]
+- !private ["PSo16NSObjectProtocol", "storyAuthorLabel"]
 - !private ["PSo16NSObjectProtocol", "storyTitleLabel"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - !private ["PSo16NSObjectProtocol", "text"]
@@ -346,6 +355,7 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "row"]
 - !private ["C10HackerNews8NewsData", "getStoryData"]
 - !private ["C10HackerNews8NewsData", "getTopStories"]
+- !private ["V10HackerNews9NewsModel", "author"]
 - ["V10HackerNews9NewsModel", "deinit"]
 - !private ["V10HackerNews9NewsModel", "title"]
 - ["PSs21NilLiteralConvertible", "Some"]
@@ -376,6 +386,7 @@ depends-member:
 - !private ["VSs5Slice", "_Element"]
 - !private ["PSs10Strideable", "Distance"]
 - !private ["PSs10Strideable", "IntegerLiteralType"]
+- !private ["C10HackerNews13TableViewCell", "storyAuthorLabel"]
 - !private ["C10HackerNews13TableViewCell", "storyTitleLabel"]
 - ["C10HackerNews19TableViewController", "AnyObject"]
 - ["C10HackerNews19TableViewController", "Int"]
@@ -403,6 +414,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "indexPathForCell"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
 - !private ["PSo29UIAccessibilityIdentification", "rowHeight"]
+- !private ["PSo29UIAccessibilityIdentification", "storyAuthorLabel"]
 - !private ["PSo29UIAccessibilityIdentification", "storyTitleLabel"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo12UIAppearance", "dequeueReusableCellWithIdentifier"]
@@ -410,6 +422,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "indexPathForCell"]
 - !private ["PSo12UIAppearance", "reloadData"]
 - !private ["PSo12UIAppearance", "rowHeight"]
+- !private ["PSo12UIAppearance", "storyAuthorLabel"]
 - !private ["PSo12UIAppearance", "storyTitleLabel"]
 - !private ["PSo12UIAppearance", "text"]
 - ["PSo21UIAppearanceContainer", "Int"]
@@ -429,6 +442,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "prepareForSegue"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
 - !private ["PSo21UIAppearanceContainer", "rowHeight"]
+- !private ["PSo21UIAppearanceContainer", "storyAuthorLabel"]
 - !private ["PSo21UIAppearanceContainer", "storyTitleLabel"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
@@ -454,6 +468,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "indexPathForCell"]
 - !private ["PSo17UICoordinateSpace", "reloadData"]
 - !private ["PSo17UICoordinateSpace", "rowHeight"]
+- !private ["PSo17UICoordinateSpace", "storyAuthorLabel"]
 - !private ["PSo17UICoordinateSpace", "storyTitleLabel"]
 - !private ["PSo17UICoordinateSpace", "text"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCellWithIdentifier"]
@@ -461,6 +476,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "indexPathForCell"]
 - !private ["PSo13UIDynamicItem", "reloadData"]
 - !private ["PSo13UIDynamicItem", "rowHeight"]
+- !private ["PSo13UIDynamicItem", "storyAuthorLabel"]
 - !private ["PSo13UIDynamicItem", "storyTitleLabel"]
 - !private ["PSo13UIDynamicItem", "text"]
 - ["PSo18UIFocusEnvironment", "Int"]
@@ -480,11 +496,13 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "prepareForSegue"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
 - !private ["PSo18UIFocusEnvironment", "rowHeight"]
+- !private ["PSo18UIFocusEnvironment", "storyAuthorLabel"]
 - !private ["PSo18UIFocusEnvironment", "storyTitleLabel"]
 - ["PSo18UIFocusEnvironment", "tableView"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo27UIGestureRecognizerDelegate", "storyAuthorLabel"]
 - !private ["PSo27UIGestureRecognizerDelegate", "storyTitleLabel"]
 - !private ["CSo7UILabel", "text"]
 - ["CSo11UIResponder", "AnyObject"]
@@ -511,6 +529,7 @@ depends-member:
 - ["CSo11UIResponder", "prepareForSegue"]
 - !private ["CSo11UIResponder", "reloadData"]
 - !private ["CSo11UIResponder", "rowHeight"]
+- !private ["CSo11UIResponder", "storyAuthorLabel"]
 - !private ["CSo11UIResponder", "storyTitleLabel"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "text"]
@@ -556,6 +575,7 @@ depends-member:
 - !private ["CSo11UITableView", "reloadData"]
 - !private ["CSo11UITableView", "rowHeight"]
 - !private ["CSo15UITableViewCell", "deinit"]
+- !private ["CSo15UITableViewCell", "storyAuthorLabel"]
 - !private ["CSo15UITableViewCell", "storyTitleLabel"]
 - ["CSo21UITableViewController", "AnyObject"]
 - ["CSo21UITableViewController", "Int"]
@@ -623,6 +643,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "prepareForSegue"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
 - !private ["PSo18UITraitEnvironment", "rowHeight"]
+- !private ["PSo18UITraitEnvironment", "storyAuthorLabel"]
 - !private ["PSo18UITraitEnvironment", "storyTitleLabel"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "text"]
@@ -633,6 +654,7 @@ depends-member:
 - !private ["CSo6UIView", "indexPathForCell"]
 - !private ["CSo6UIView", "reloadData"]
 - !private ["CSo6UIView", "rowHeight"]
+- !private ["CSo6UIView", "storyAuthorLabel"]
 - !private ["CSo6UIView", "storyTitleLabel"]
 - !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "AnyObject"]
@@ -702,6 +724,7 @@ depends-member:
 - ["PSs12_Reflectable", "init"]
 - !private ["PSs12_Reflectable", "reloadData"]
 - !private ["PSs12_Reflectable", "rowHeight"]
+- !private ["PSs12_Reflectable", "storyAuthorLabel"]
 - !private ["PSs12_Reflectable", "storyTitleLabel"]
 - !private ["PSs12_Reflectable", "subscript"]
 - !private ["PSs12_Reflectable", "text"]

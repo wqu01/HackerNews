@@ -7,15 +7,15 @@ provides-member:
 - ["C10HackerNews14ViewController", ""]
 provides-dynamic-lookup:
 - "didReceiveMemoryWarning"
-- "webView"
 - "viewDidLoad"
+- "webView"
 depends-top-level:
-- "ViewController"
 - !private "NSURL"
-- "NewsModel"
 - !private "NSURLRequest"
-- "UIWebView"
+- "ViewController"
+- "NewsModel"
 - "UIViewController"
+- "UIWebView"
 depends-member:
 - !private ["PSs9AnyObject", "NSURL"]
 - !private ["PSs9AnyObject", "NSURLRequest"]
